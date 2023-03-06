@@ -39,7 +39,7 @@ public class SumPrimeNumbers {
         // *Python*
         //         primes.append(num[i])
         //         for j in range(i, n+1, i):
-        //             a[j] = 0
+        //             num[j] = 0
         //      i += 1
         // print(sum(primes))
 
