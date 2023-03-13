@@ -1,6 +1,8 @@
 package cw_3;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
 
 /*
@@ -16,7 +18,7 @@ public class CubesMain {
         Cube cube1 = new Cube(3, "желтый", "деревянный");
         Cube cube2 = new Cube(3, "зеленый", "металлический");
         Cube cube3 = new Cube(4, "красный", "картонный");
-        Cube cube4 = new Cube(2, "желтый", "стальной");
+        Cube cube4 = new Cube(3, "желтый", "деревянный");
 
         List<Cube> cubesList = new ArrayList<>();
         cubesList.add(cube1);
@@ -39,9 +41,18 @@ public class CubesMain {
         }
         System.out.println(k + " кубиков желтого цвета и их суммарный объем " + volume);
         System.out.println(kWood + " деревянных кубика с ребром 3 см");
+        System.out.println("Уникальный список = " + unicumCollection(cubesList));
     }
 
     private static Integer volumeCube(Integer size) {
         return size * size * size;
+    }
+
+    /**
+     * @param cubesList
+     * @return коллекция без дубликатов
+     */
+    private static Collection unicumCollection(Collection itemList) {
+        return new HashSet<>(itemList);
     }
 }
