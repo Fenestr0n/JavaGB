@@ -1,9 +1,6 @@
 package hw_3;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 
 /*
@@ -39,6 +36,5 @@ public class MaxPriceProduct {
     public static boolean premium(String strName, String findStr) {
         if (strName.contains(findStr)) return true;
         return false;    
-        
     }
 }
