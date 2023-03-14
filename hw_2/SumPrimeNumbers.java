@@ -13,11 +13,19 @@ public class SumPrimeNumbers {
         int sum = 0;
         for (int i = 0; i < n; i++) {
             int num = scanner.nextInt();
-            if (num > 0 && num % 1 == 0) {
+            if (isPrimeNumber(num)) {
                 sum += num;
             }
         }
         scanner.close();
         System.out.println(sum);
+        }
+
+    public static boolean isPrimeNumber(Integer number) {
+        if(number < 2) return false;
+        for(int i = 2; i <= Math.sqrt(number); i++) {
+            if(number % i == 0) return false;
+        }
+        return true;
     }
 }
